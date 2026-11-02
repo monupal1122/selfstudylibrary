@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <defs>
+    <linearGradient id="mobNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102A43"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="mobGold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E59819"/>
+      <stop offset="100%" stop-color="#F4B942"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Icon Emblem Group -->
+  <g transform="translate(4, 5)">
+    <rect width="50" height="50" rx="14" fill="url(#mobNavy)"/>
+    <rect x="2" y="2" width="46" height="46" rx="12" stroke="#F4B942" stroke-width="1" stroke-opacity="0.4"/>
+
+    <!-- Open Book Pages -->
+    <path d="M 12 34 C 16 30 22 30 25 32 L 25 20 C 22 18 16 18 12 21 Z" fill="#FFFFFF"/>
+    <path d="M 38 34 C 34 30 28 30 25 32 L 25 20 C 28 18 34 18 38 21 Z" fill="#FFFFFF"/>
+    <path d="M 25 33 L 25 19" stroke="#CBD5E1" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Base Shelf Curve -->
+    <path d="M 10 36 C 16 32 22 33 25 34.5 C 28 33 34 32 40 36 C 40 36.5 34 33.5 25 35 C 16 33.5 10 36.5 10 36 Z" fill="#F4B942"/>
+
+    <!-- Upward Knowledge Flame -->
+    <path d="M 25 10 C 25 10 21 15 22 18 C 23 20 25 21 25 21 C 25 21 27 20 28 18 C 29 15 25 10 25 10 Z" fill="url(#mobGold)"/>
+  </g>
+
+  <!-- Typography Group -->
+  <g transform="translate(62, 10)">
+    <text x="0" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800" fill="#102A43" letter-spacing="0.3">
+      SELF STUDY
+    </text>
+    <text x="0" y="36" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800" fill="#1D4ED8" letter-spacing="0.3">
+      LIBRARY
+    </text>
+  </g>
+</svg>
+
