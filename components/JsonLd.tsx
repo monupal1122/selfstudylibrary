@@ -1,11 +1,13 @@
 import React from 'react';
-import { BUSINESS_INFO, FACILITIES } from '@/lib/site-data';
+import { BUSINESS_INFO, FACILITIES, getSiteUrl } from '@/lib/site-data';
 
 export default function JsonLd() {
+  const siteUrl = getSiteUrl();
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Library',
-    '@id': `${BUSINESS_INFO.canonicalUrl}/#library`,
+    '@id': `${siteUrl}/#library`,
     name: BUSINESS_INFO.name,
     alternateName: [
       'Self Study Library Jalandhar',
@@ -14,14 +16,14 @@ export default function JsonLd() {
     ],
     description:
       'Self Study Library is a peaceful, 24-hour self study library and reading room located near Gate 3, Jalandhar Bus Stand, Outside Jawahar Nagar, Jalandhar, Punjab. Featuring individual study cabins, air-conditioning, high-speed Wi-Fi, and CCTV security.',
-    url: BUSINESS_INFO.canonicalUrl,
+    url: siteUrl,
     telephone: BUSINESS_INFO.phoneRaw,
     image: [
-      `${BUSINESS_INFO.canonicalUrl}/images/og-image.svg`,
-      `${BUSINESS_INFO.canonicalUrl}/images/hero-library.svg`,
-      `${BUSINESS_INFO.canonicalUrl}/logo/logo.svg`,
+      `${siteUrl}/images/og-image.svg`,
+      `${siteUrl}/images/hero-library.svg`,
+      `${siteUrl}/logo/logo.svg`,
     ],
-    logo: `${BUSINESS_INFO.canonicalUrl}/logo/logo.svg`,
+    logo: `${siteUrl}/logo/logo.svg`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Gate 3, Bus Stand, Near Headmasters Academy, Outside, Jawahar Nagar',
@@ -95,4 +97,3 @@ export default function JsonLd() {
     />
   );
 }
-

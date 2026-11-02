@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { BUSINESS_INFO } from '@/lib/site-data';
+import { BUSINESS_INFO, getSiteUrl } from '@/lib/site-data';
 import JsonLd from '@/components/JsonLd';
 
 const inter = Inter({
@@ -18,8 +18,10 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  metadataBase: new URL(BUSINESS_INFO.canonicalUrl),
+  metadataBase: new URL(siteUrl),
   title: 'Self Study Library in Jalandhar | Near Bus Stand – Open 24 Hours',
   description:
     'Looking for a self study library near Jalandhar Bus Stand? Visit Self Study Library at Gate 3, Jawahar Nagar, Jalandhar. Open 24 hours. Call 81959 74627.',
@@ -39,13 +41,13 @@ export const metadata: Metadata = {
   creator: 'Self Study Library',
   publisher: 'Self Study Library',
   alternates: {
-    canonical: BUSINESS_INFO.canonicalUrl,
+    canonical: siteUrl,
   },
   openGraph: {
     title: 'Self Study Library in Jalandhar | Near Bus Stand – Open 24 Hours',
     description:
       'Looking for a self study library near Jalandhar Bus Stand? Visit Self Study Library at Gate 3, Jawahar Nagar, Jalandhar. Open 24 hours. Call 81959 74627.',
-    url: BUSINESS_INFO.canonicalUrl,
+    url: siteUrl,
     siteName: 'Self Study Library Jalandhar',
     images: [
       {

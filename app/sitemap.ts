@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next';
-import { BUSINESS_INFO } from '@/lib/site-data';
+import { getSiteUrl } from '@/lib/site-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = BUSINESS_INFO.canonicalUrl;
+  const baseUrl = getSiteUrl();
   const lastModified = new Date();
 
   return [
@@ -14,4 +14,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
-

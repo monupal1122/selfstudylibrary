@@ -1,5 +1,18 @@
 import { Facility, GalleryImage, WhyChooseItem, NavItem } from '@/types';
 
+export function getSiteUrl(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  }
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return 'https://selfstudylibrary.com';
+}
+
 export const BUSINESS_INFO = {
   name: 'Self Study Library',
   tagline: 'Your Dedicated Space for Focused Study in Jalandhar',
@@ -199,4 +212,3 @@ export const FAQS = [
     a: 'Yes, absolutely. We prioritize safety with 24/7 CCTV surveillance, well-lit surroundings near Bus Stand Gate 3, and a disciplined, respectful student environment.',
   },
 ];
-
